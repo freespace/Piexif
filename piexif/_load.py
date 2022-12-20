@@ -164,7 +164,7 @@ class _ExifReader(object):
             else:
                 data = struct.unpack(self.endian_mark + "H" * length,
                                      value[0:length * 2])
-        elif t == TYPES.Long: # LONG
+        elif t in (TYPES.Long, TYPES.IFD): # LONG
             if length > 1:
                 pointer = struct.unpack(self.endian_mark + "L", value)[0]
                 data = struct.unpack(self.endian_mark + "L" * length,

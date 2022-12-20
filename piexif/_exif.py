@@ -11,6 +11,7 @@ class TYPES:
     SRational = 10
     Float = 11
     DFloat = 12
+    IFD = 13
 
 
 TAGS = {
